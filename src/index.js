@@ -12,28 +12,32 @@ import VideoDetail from './pages/VideoDetail';
 import Contack from './pages/Contack';
 import Login from './pages/Login';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      errorElement: <NotFound />,
+      children: [
+        { index: true, element: <Videos /> },
+        { path: '/contack', element: <Contack /> },
+        { path: '/login', element: <Login /> },
+        { path: '/videos', element: <Videos /> },
+        { path: '/videos/:keyword', element: <Videos /> },
+        { path: '/videos/watch/:videoId', element: <VideoDetail /> },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <App />,
-    errorElement: <NotFound />,
-    children: [
-      { index: true, element: <Videos /> },
-      { path: '/contack', element: <Contack /> },
-      { path: '/login', element: <Login /> },
-      { path: '/videos', element: <Videos /> },
-      { path: '/videos/:keyword', element: <Videos /> },
-      { path: '/videos/watch/:videoId', element: <VideoDetail /> },
-    ],
-  },
-]);
+    basename: process.env.PUBLIC_URL,
+  }
+);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
-  // </React.StrictMode>
 );
 
 reportWebVitals();
