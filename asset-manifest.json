@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fatboy/static/css/main.7eb09311.css",
+    "main.js": "/fatboy/static/js/main.47116010.js",
+    "static/js/787.a3118e53.chunk.js": "/fatboy/static/js/787.a3118e53.chunk.js",
+    "index.html": "/fatboy/index.html",
+    "main.7eb09311.css.map": "/fatboy/static/css/main.7eb09311.css.map",
+    "main.47116010.js.map": "/fatboy/static/js/main.47116010.js.map",
+    "787.a3118e53.chunk.js.map": "/fatboy/static/js/787.a3118e53.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7eb09311.css",
+    "static/js/main.47116010.js"
+  ]
+}
